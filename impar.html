@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imPAR</title>
+
+
+    <script>
+
+        // A máquina escolhe um número aleatório entre 0 e 10
+        let numeroMaquina = Math.floor(Math.random() * 11);
+
+        // A máquina decide se prefere par ou ímpar
+        let escolhaMaquina = Math.random() < 0.5 ? 'par' : 'impar';
+        console.log(`A máquina escolheu: ${escolhaMaquina}`);
+
+        // Pede ao jogador para escolher um número (simulado aqui, em um ambiente real usaria prompt ou input)
+        let numeroJogador = parseInt(prompt("Sua vez! Digite um número entre 0 e 10:"));
+        console.log(`Você escolheu o número: ${numeroJogador}`);
+
+        // Soma os números
+        let soma = numeroMaquina + numeroJogador;
+        console.log(`A soma é: ${numeroMaquina} + ${numeroJogador} = ${soma}`);
+
+        // Verifica se a soma é par ou ímpar
+        let resultadoSoma = soma % 2 === 0 ? 'par' : 'impar';
+        console.log(`O resultado da soma é: ${resultadoSoma}`);
+
+        // Determina o vencedor
+        if (resultadoSoma === escolhaMaquina) {
+            console.log("A máquina ganhou!");
+        } else {
+            console.log("Você ganhou!");
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
